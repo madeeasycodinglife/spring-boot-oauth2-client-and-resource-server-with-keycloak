@@ -1,0 +1,40 @@
+Certainly! Here's an example of a naming convention for realms based on a professional scenario:
+
+Organization: ABC Corporation
+Environment: Development
+Project: Customer Portal
+Naming Convention: [Organization]-[Environment]-[Project]
+
+Realm Name: ABC-Dev-CustomerPortal
+
+
+___________________________________________________________________________________________________________________________________________
+
+//------------------------------------- To get access-token -------------------------------------
+
+#1) POST http://localhost:8080/realms/Pabitra/protocol/openid-connect/token
+#2) body > x-www-form-urlencoded
+#3) grant_type : password
+#4) client_id : spring-boot-rest-api-client
+#5) username : pabitra
+#6) password : 1234
+#7) Send
+
+// ------------------------------------- To get refresh-token -------------------------------------
+
+#1) POST http://localhost:8080/realms/Pabitra/protocol/openid-connect/token
+#2) body > x-www-form-urlencoded
+#3) grant_type : refresh_token
+#4) client_id : spring-boot-rest-api-client
+#5) refresh_token : <refresh-token>
+#6) Send
+
+// ------------------------------------- To get access-to-rest-protected-api -------------------------------------
+#1) GET http://localhost:8081/api/test/admin
+#2) Authorization > Bearer Token > Token : <access-token>
+#3) Send
+
+
+
+
+
